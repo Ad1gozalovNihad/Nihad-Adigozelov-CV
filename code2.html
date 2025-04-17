@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adigozelov Nihad CV</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #012230;
+      color: #000000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .CVnin_ici {
+      width: 80%;
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(255, 5, 5, 0.1);
+      text-align: center;
+    }
+
+    .profil_sekli {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #000000;
+    }
+
+    h1 {
+      color: #000000;
+      margin: 0;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: #000101;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    .add-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .add-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="CVnin_ici">
+    
+    <img class="profil_sekli" src="profile (2).jpg" alt="Profil şəkli">
+    
+    <h1>Nihad Adigozelov</h1>
+    <p><strong>Email:</strong> adigozelovnihad113@gmail.com</p>
+    <p><strong>Telefon:</strong> +994 55 607 12 57</p>
+    <p><strong>Yasayis:</strong> Baki seheri, Nizami rayonu, Kesle qesebesi </p>
+
+    <h2>Təhsil</h2>
+    <ul id="education-list">
+      <li>Azərbaycan Texniki Universiteti – İnformasiya Təhlükəsizliyi (2024-2028)</li>
+    </ul>
+    <button class="add-btn" onclick="addItem('education')">Yeni Təhsil Əlavə et</button>
+
+    <h2>Bacarıqlar</h2>
+    <ul id="skills-list">
+      <li>HTML, CSS, Linux, Network, Windows</li>
+      <li>IT texnik / helpdesk</li>
+      <li>Kompüter yığmaq və formatlama / əməliyyat sisteminin yazılması</li>
+    </ul>
+    <button class="add-btn" onclick="addItem('skills')">Yeni Bacarıq Əlavə et</button>
+  </div>
+
+  <script>
+    // Sadələşdirilmiş JavaScript funksiyası
+    function addItem(type) {
+      var newItem = prompt('Yeni məlumat əlavə et:');
+      if (newItem) {
+        var listId = type === 'education' ? 'education-list' : 'skills-list';
+        var list = document.getElementById(listId);
+        var li = document.createElement('li');
+        li.textContent = newItem;
+        list.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>
