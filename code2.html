@@ -1,111 +1,213 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adigozelov Nihad CV</title>
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nihad Adigozelovun CV-si</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #012230;
-      color: #000000;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: 'Arial', sans-serif;
     }
 
-    .CVnin_ici {
-      width: 80%;
-      max-width: 800px;
-      margin: 40px auto;
-      background-color: #fff;
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: #f2f2f2;
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0px 0px 10px rgba(255, 5, 5, 0.1);
-      text-align: center;
     }
 
-    .profil_sekli {
-      width: 150px;
-      height: 150px;
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar {
+      width: 35%;
+      background: #1e2c3a;
+      color: white;
+      padding: 30px;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
+      border: 4px solid white;
       margin-bottom: 20px;
-      border: 3px solid #000000;
     }
 
-    h1 {
-      color: #000000;
-      margin: 0;
+    .sidebar h2, .sidebar p, .sidebar li {
+      margin-bottom: 10px;
     }
 
-    h2 {
-      margin-top: 40px;
-      color: #000101;
+    .sidebar h3 {
+      margin: 30px 0 10px;
+      font-size: 18px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
     }
 
-    ul {
-      list-style-type: square;
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .main {
+      width: 65%;
+      padding: 30px;
+    }
+
+    .main h1 {
+      font-size: 28px;
+      color: #1e2c3a;
+    }
+
+    .main h2 {
+      font-size: 20px;
+      margin: 20px 0 10px;
+      color: #1e2c3a;
+    }
+
+    .section-title {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 30px 0 10px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .job {
+      margin-bottom: 20px;
+    }
+
+    .job h4 {
+      margin-bottom: 5px;
+    }
+
+    .job ul {
+      list-style: disc;
       padding-left: 20px;
-      text-align: left;
     }
 
-    p {
-      text-align: left;
+    .reference {
+      margin-top: 30px;
     }
 
     .add-btn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
       margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #1e2c3a;
+      color: white;
       border: none;
       cursor: pointer;
-      font-size: 16px;
+      border-radius: 4px;
     }
 
     .add-btn:hover {
-      background-color: #45a049;
+      background-color: #2d3d4f;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 5px;
+      font-size: 14px;
     }
   </style>
 </head>
-
-
 <body>
-  <div class="CVnin_ici">
-    
-    <img class="profil_sekli" src="profile (2).jpg" alt="Profil şəkli">
-    
-    <h1>Nihad Adigozelov</h1>
-    <p><strong>Email:</strong> adigozelovnihad113@gmail.com</p>
-    <p><strong>Telefon:</strong> +994 55 607 12 57</p>
-    <p><strong>Yasayis:</strong> Baki seheri, Nizami rayonu, Kesle qesebesi </p>
+  <div class="container">
+    <div class="sidebar">
+      <img class="profile-pic" src="https://deommarket.com/web/image/product.template/36/image_1024?unique=1bcfe7b" alt="Profile Picture">
+      <h2>Contact</h2>
+      <p>📞 +994 55 607 12 57</p>
+      <p>✉️ adigozelovnihad113@gmail.com</p>
+      <p>📍 Bakı şəhəri, Nizami rayonu, Keşlə qəsəbəsi, Pəhlivan Fərzəliyev 160</p>
 
-    <h2>Təhsil</h2>
-    <ul id="education-list">
-      <li>Azərbaycan Texniki Universiteti – İnformasiya Təhlükəsizliyi (2024-2028)</li>
-    </ul>
-    <button class="add-btn" onclick="addItem('education')">Yeni Təhsil Əlavə et</button>
+      <h3>Təhsil</h3>
+      <div id="education-list">
+        <p>2024 - 2028<br>Azərbaycan Texniki Universiteti<br>İnformasiya təhlükəsizliyi</p>
+      </div>
+      <button class="add-btn" onclick="addEducation()">+ Təhsil əlavə et</button>
 
-    <h2>Bacarıqlar</h2>
-    <ul id="skills-list">
-      <li>HTML, CSS, Linux, Network, Windows</li>
-      <li>IT texnik / helpdesk</li>
-      <li>Kompüter yığmaq və formatlama / əməliyyat sisteminin yazılması</li>
-    </ul>
-    <button class="add-btn" onclick="addItem('skills')">Yeni Bacarıq Əlavə et</button>
+      <h3>Bacarıqlar</h3>
+      <ul id="skills-list">
+        <li>Əməliyyat Sistemləri və Proqram Təminatı</li>
+        <li>Hardware və Troubleshooting</li>
+        <li>Təhlükəsizlik və Məlumat Bərpası</li>
+        <li>Şəbəkə və İnfrastruktur</li>
+        <li>Printer və skanerlərin quraşdırılması</li>
+        <li>Virtual maşınların qurulması və idarə olunması</li>
+        <li>Başlanğıc səviyyədə şəbəkə bilikləri</li>
+      </ul>
+      <button class="add-btn" onclick="addSkill()">+ Bacarıq əlavə et</button>
+
+      <h3>Languages</h3>
+      <ul>
+        <li>English (technical)</li>
+        <li>Russian (technical)</li>
+      </ul>
+    </div>
+    <div class="main">
+      <h1>Nihad <strong>Adigozelov</strong></h1>
+      <h2>İT texnik</h2>
+
+      <div class="section-title">Profil</div>
+      <p>Özümü İT sahəsində inkişaf etdirməyə çalışıram, hər gün irəliyə bir addım atmaq üçün çalışıram )</p>
+
+      <div class="section-title">İş Təcrübəsi</div>
+      <div id="work-experience">
+        <div class="job">
+          <h4>Faiqoglu MMC</h4>
+          <ul>
+            <li>İT specialist</li>
+          </ul>
+        </div>
+      </div>
+      <button class="add-btn" onclick="addExperience()">+ Təcrübə əlavə et</button>
+
+      <div class="section-title">Reference</div>
+      <div class="reference">
+        <p><strong>Cebiyev Mirfazil</strong><br>20-ci sahə, 223<br>✉️ faiqoglu.mmc@gmail.com</p>
+      </div>
+    </div>
   </div>
 
   <script>
-    // Sadələşdirilmiş JavaScript funksiyası
-    function addItem(type) {
-      var newItem = prompt('Yeni məlumat əlavə et:');
-      if (newItem) {
-        var listId = type === 'education' ? 'education-list' : 'skills-list';
-        var list = document.getElementById(listId);
-        var li = document.createElement('li');
-        li.textContent = newItem;
-        list.appendChild(li);
+    function addEducation() {
+      const education = prompt("Yeni təhsil məlumatı daxil edin (məsələn: 2025 - 2029\\nUniversitet\\nİxtisas)");
+      if (education) {
+        const p = document.createElement("p");
+        p.textContent = education;
+        document.getElementById("education-list").appendChild(p);
+      }
+    }
+
+    function addSkill() {
+      const skill = prompt("Yeni bacarıq daxil edin:");
+      if (skill) {
+        const li = document.createElement("li");
+        li.textContent = skill;
+        document.getElementById("skills-list").appendChild(li);
+      }
+    }
+
+    function addExperience() {
+      const company = prompt("Şirkətin adını daxil edin:");
+      const position = prompt("Vəzifəni daxil edin:");
+      if (company && position) {
+        const div = document.createElement("div");
+        div.className = "job";
+        div.innerHTML = `<h4>${company}</h4><ul><li>${position}</li></ul>`;
+        document.getElementById("work-experience").appendChild(div);
       }
     }
   </script>
